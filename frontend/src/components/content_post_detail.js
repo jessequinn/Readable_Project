@@ -212,7 +212,6 @@ class ContentPostDetail extends Component {
                   >
                     <CommentRemove className={classes.spacing} />
                   </IconButton>
-                  {console.log(post.commentCount)}
                   <Badge
                     color="primary"
                     badgeContent={
