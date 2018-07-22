@@ -212,13 +212,14 @@ class ContentPostDetail extends Component {
                   >
                     <CommentRemove className={classes.spacing} />
                   </IconButton>
+                  {console.log(post.commentCount)}
                   <Badge
                     color="primary"
                     badgeContent={
-                      typeof post.commentCount !== "undefined" ||
-                      !isNaN(post.commentCount)
-                        ? post.commentCount
-                        : 0
+                      typeof post.commentCount === "undefined" ||
+                      isNaN(post.commentCount)
+                        ? 0
+                        : post.commentCount
                     }
                     className={classes.margin}
                   >
